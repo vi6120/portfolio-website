@@ -144,6 +144,24 @@ body {
     color: #2980b9;
 }
 
+/* KPIs */
+.kpis {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.kpi {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 /* Skills Section */
 .row {
     display: flex;
@@ -251,28 +269,7 @@ body {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
-.icons .github-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #3498db;
-    padding: 0;
-    position: relative;
-}
 
-.icons .github-icon img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.icons .github-icon .label {
-    display: none;
-}
-
-.icons .github-icon:hover {
-    background: #2980b9;
-}
 
 .copyright {
     text-align: center;
