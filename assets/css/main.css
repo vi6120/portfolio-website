@@ -251,6 +251,25 @@ body {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
+.icons .github-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3498db;
+    padding: 0;
+}
+
+.icons .github-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icons .github-icon:hover {
+    background: #2980b9;
+}
+
 .copyright {
     text-align: center;
     list-style: none;
