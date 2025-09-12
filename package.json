@@ -13,17 +13,19 @@
     "portfolio",
     "data-analyst",
     "python",
-    "machine-learning",
-    "streamlit",
+    "Sql",
+    "PowerBI",
+    "Tableau",
+    "Excel",
     "analytics"
   ],
   "author": "Vikas Ramaswamy",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vikasramaswamy/portfolio-website.git"
+    "url": "https://github.com/vi6120"
   },
-  "homepage": "https://vikasramaswamy.github.io/portfolio-website/",
+  "homepage": "https://vi6120.github.io/portfolio-website/",
   "devDependencies": {},
   "dependencies": {}
 }
