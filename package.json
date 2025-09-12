@@ -1,0 +1,29 @@
+{
+  "name": "vikas-ramaswamy-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Vikas Ramaswamy - Data Analyst",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'See deploy.md for deployment instructions'"
+  },
+  "keywords": [
+    "portfolio",
+    "data-analyst",
+    "python",
+    "machine-learning",
+    "streamlit",
+    "analytics"
+  ],
+  "author": "Vikas Ramaswamy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikasramaswamy/portfolio-website.git"
+  },
+  "homepage": "https://vikasramaswamy.github.io/portfolio-website/",
+  "devDependencies": {},
+  "dependencies": {}
+}
