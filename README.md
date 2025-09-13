@@ -2,7 +2,7 @@
 
 A professional portfolio website showcasing data analytics and machine learning projects.
 
-## 🚀 Live Projects Featured
+## Live Projects Featured
 
 ### 1. Supply Chain & Inventory Optimization Analytics
 - **Tech Stack**: Python, Streamlit, Pandas, Prophet, ARIMA
@@ -27,7 +27,7 @@ A professional portfolio website showcasing data analytics and machine learning 
 - **Features**: Real-time stock analysis, ML predictions, investment recommendations
 - **Highlights**: Sentiment-enhanced predictions with live streaming data
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 ### Programming & Analytics
 - **Python**: Pandas, NumPy, Scikit-learn, Statsmodels
@@ -41,7 +41,7 @@ A professional portfolio website showcasing data analytics and machine learning 
 - **Cloud Deployment**: Streamlit Cloud, Heroku, AWS
 - **Version Control**: Git, GitHub
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio-website/
@@ -56,7 +56,7 @@ portfolio-website/
 └── deploy.md              # Deployment guide
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone or download** this repository
 2. **Open** `index.html` in your browser
@@ -64,7 +64,7 @@ portfolio-website/
 4. **Replace** images in `assets/images/`
 5. **Deploy** to GitHub Pages, Netlify, or Vercel
 
-## 🎨 Customization
+## Customization
 
 ### Update Project Information
 Edit the project sections in `index.html`:
@@ -93,7 +93,7 @@ Follow the existing pattern in `index.html`:
 </section>
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 The portfolio is fully responsive and works on:
 - Desktop computers
@@ -101,7 +101,7 @@ The portfolio is fully responsive and works on:
 - Mobile phones
 - All modern browsers
 
-## 🌐 Deployment Options
+## Deployment Options
 
 ### GitHub Pages (Free)
 1. Push to GitHub repository
@@ -118,7 +118,7 @@ The portfolio is fully responsive and works on:
 2. Automatic deployments
 3. Performance optimized
 
-## 📊 Analytics Integration
+## Analytics Integration
 
 Add Google Analytics by including this in `<head>`:
 ```html
@@ -132,14 +132,14 @@ Add Google Analytics by including this in `<head>`:
 </script>
 ```
 
-## 🔧 Performance Optimization
+## Performance Optimization
 
 - Optimized CSS and JavaScript
 - Compressed images recommended
 - Lazy loading for images
 - Minimal external dependencies
 
-## 📞 Contact Information
+## Contact Information
 
 Update contact details in the footer section:
 - Email address
@@ -147,11 +147,11 @@ Update contact details in the footer section:
 - LinkedIn profile
 - GitHub profile
 
-## 📄 License
+## License
 
 This portfolio template is open source and available under the MIT License.
 
-## 🙏 Credits
+## Credits
 
 - Design inspired by HTML5 UP templates
 - Icons and styling customized for data analytics portfolio
