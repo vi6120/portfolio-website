@@ -3,28 +3,28 @@
 # Portfolio Website Setup Script
 echo "🚀 Setting up Vikas Ramaswamy's Portfolio Website..."
 
-# Initialize git repository
+# Set up git if not already done
 if [ ! -d ".git" ]; then
-    echo "📁 Initializing Git repository..."
+    echo "📁 Setting up Git..."
     git init
     git add .
     git commit -m "Initial portfolio website setup"
-    echo "✅ Git repository initialized"
+    echo "✅ Git ready"
 else
-    echo "📁 Git repository already exists"
+    echo "📁 Git already set up"
 fi
 
-# Create placeholder images if they don't exist
-echo "🖼️  Creating placeholder images..."
+# Make sure image folder exists
+echo "🖼️  Setting up image folder..."
 mkdir -p assets/images
 
-# Check if images exist, if not provide instructions
+# Let user know about images
 if [ ! -f "assets/images/supply-chain.jpg" ]; then
-    echo "⚠️  Please add your project images to assets/images/"
-    echo "   Required: supply-chain.jpg, finance.jpg, churn.jpg, stock-analyzer.jpg"
+    echo "⚠️  Don't forget to add your project images to assets/images/"
+    echo "   You'll need: supply-chain.jpg, finance.jpg, churn.jpg, stock-analyzer.jpg"
 fi
 
-# Make the script executable
+# Make sure this script can be run
 chmod +x setup.sh
 
 echo "✅ Portfolio setup complete!"
