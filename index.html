@@ -1,151 +1,1005 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Vikas Ramaswamy - Data Analyst Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikas Ramaswamy — Data & AI Engineer</title>
+  <meta name="description" content="Vikas Ramaswamy — Data Engineer, Analytics Engineer and AI Engineer. Production pipelines, LLM applications, and analytics systems." />
+  <meta name="author" content="Vikas Ramaswamy" />
+  <meta property="og:title" content="Vikas Ramaswamy | Data & AI Engineer" />
+  <meta property="og:description" content="Building production data pipelines and AI applications. dbt · Airflow · LangGraph · FastAPI." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Lato:ital@1&display=swap" rel="stylesheet" />
 
-		<!-- Header -->
-		<div id="header">
-			<h1>Vikas Ramaswamy</h1>
-			<p>Data Analyst and Engineer | Python, SQL and AI Tools</p>
-		</div>
+  <style>
+    /* ── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #0D1B2A;
+      --navy2:   #1A2E45;
+      --gold:    #B8963E;
+      --gold-lt: #D4AF62;
+      --bg:      #F7F5F0;
+      --white:   #FFFFFF;
+      --text:    #1E1E1E;
+      --muted:   #6A6860;
+      --border:  #DDD9D1;
+      --card:    #FFFFFF;
+      --tag-bg:  #EEF0F3;
+      --tag-txt: #374151;
+      --radius:  6px;
+      --shadow:  0 2px 16px rgba(13,27,42,0.07);
+      --shadow-hover: 0 6px 32px rgba(13,27,42,0.13);
+      --ff-head: 'Playfair Display', Georgia, serif;
+      --ff-body: 'Lato', 'Helvetica Neue', sans-serif;
+      --max-w:   1160px;
+      --trans:   0.25s ease;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
 
-		<!-- Main -->
-		<div id="main">
+    /* ── Utility ──────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+    .section { padding: 96px 0; }
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--ff-head);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 40px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 3px;
+      background: var(--tag-bg);
+      color: var(--tag-txt);
+      margin: 3px 3px 3px 0;
+    }
+    .tag.live { background: #E8F5E9; color: #1B5E20; }
+    .tag.ai { background: #E8EAF6; color: #1A237E; }
+    .tag.ml { background: #F3E5F5; color: #4A148C; }
+    .tag.eng { background: #E3F2FD; color: #0D47A1; }
+    .tag.research { background: #FFF8E1; color: #F57F17; }
 
-			<header class="major container medium">
-				<h2>Professional Portfolio for Data Projects</h2>
-				<p>Comprehensive analytics solutions using Python, SQL, Gen AI and Interactive Dashboards</p>
-			</header> 
+    /* ── Scroll reveal ────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-			<div class="box alt container">
-				
-				<!-- Project 1: Supply Chain Analytics -->
-				<section class="feature left">
-					<a href="https://supply-chain-inventory-optimization.streamlit.app" class="image fit">
-						<img src="images/supply-chain.jpg" alt="Supply Chain Analytics" />
-					</a>
-					<div class="content">
-						<h3><a href="https://supply-chain-inventory-optimization.streamlit.app">Supply Chain & Inventory Optimization</a></h3>
-						<div class="kpis">
-							<span class="kpi">Demand Forecasting</span>
-							<span class="kpi">Cost Optimization</span>
-							<span class="kpi">Real-time Analytics</span>
-						</div>
-						<p>Comprehensive analytics dashboard featuring demand forecasting, inventory optimization, reorder point calculations, and supplier performance tracking. Built with Streamlit, Pandas, and advanced time series analysis.<a href="https://supply-chain-inventory-optimization.streamlit.app"> View Live Demo</a></p>
-					</div>
-				</section>
+    /* ── Navigation ───────────────────────────────── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--trans);
+    }
+    #nav.scrolled { box-shadow: 0 2px 20px rgba(13,27,42,0.08); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; max-width: var(--max-w); margin: 0 auto; padding: 0 32px;
+    }
+    .nav-logo {
+      font-family: var(--ff-head);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color var(--trans);
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      transition: background var(--trans) !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+    .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: var(--trans); }
 
-				<!-- Project 2: Financial Analytics Dashboard -->
-				<section class="feature right">
-					<a href="https://my-finance-overview.streamlit.app/" class="image fit">
-						<img src="images/finance.jpg" alt="Financial Analytics" />
-					</a>
-					<div class="content">
-						<h3><a href="https://my-finance-overview.streamlit.app/">Financial Analytics Dashboard</a></h3>
-						<div class="kpis">
-							<span class="kpi">Technical Indicators</span>
-							<span class="kpi">Live Market Data</span>
-							<span class="kpi">Portfolio Tracking</span>
-						</div>
-						<p>Professional-grade financial analysis with stock data visualization, technical indicators (RSI, MACD, Bollinger Bands), portfolio analysis, and price forecasting using Prophet and ARIMA models. Live demo available.<a href="https://my-finance-overview.streamlit.app/"> View Live Demo</a></p>
-					</div>
-				</section>
+    /* ── Hero ─────────────────────────────────────── */
+    #hero {
+      background: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(184,150,62,0.06) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(184,150,62,0.06) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: var(--max-w); margin: 0 auto; padding: 0 32px;
+      padding-top: 64px;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      animation: fadeUp 0.7s ease both;
+    }
+    .hero-name {
+      font-family: var(--ff-head);
+      font-size: clamp(44px, 7vw, 88px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-name em { color: var(--gold); font-style: italic; }
+    .hero-title {
+      font-size: clamp(16px, 2.2vw, 21px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 28px;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-title strong { color: rgba(255,255,255,0.95); font-weight: 700; }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 44px;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .hero-badge {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(184,150,62,0.35);
+      padding: 6px 14px;
+      border-radius: 3px;
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--ff-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--trans);
+    }
+    .btn-primary { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-primary:hover { background: var(--gold-lt); border-color: var(--gold-lt); }
+    .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.35); }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      animation: fadeUp 0.7s 0.8s ease both;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, rgba(184,150,62,0.8), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    .hero-stats {
+      display: flex; gap: 48px; margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      animation: fadeUp 0.7s 0.5s ease both;
+    }
+    .hero-stat-num {
+      font-family: var(--ff-head);
+      font-size: 36px; font-weight: 700;
+      color: var(--gold); line-height: 1;
+    }
+    .hero-stat-lbl {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45); margin-top: 6px;
+    }
 
-				<!-- Project 3: Customer Churn Analysis -->
-				<section class="feature left">
-					<a href="https://my-customer-churn-analysis.streamlit.app" class="image fit">
-						<img src="images/churn.png" alt="Customer Churn Analysis" />
-					</a>
-					<div class="content">
-						<h3><a href="https://my-customer-churn-analysis.streamlit.app">Customer Churn Prediction</a></h3>
-						<div class="kpis">
-							<span class="kpi">ML Algorithms</span>
-							<span class="kpi">3 Model Types</span>
-							<span class="kpi">Interactive Dashboard</span>
-						</div>
-						<p>Machine learning project predicting customer churn using Logistic Regression, Random Forest, and XGBoost. Features comprehensive EDA, interactive Streamlit dashboard, and actionable business insights for retention strategies.<a href="https://my-customer-churn-analysis.streamlit.app"> View Live Demo</a></p>
-					</div>
-				</section>
+    /* ── About ────────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .about-text p { color: var(--muted); margin-bottom: 16px; font-size: 16.5px; }
+    .about-text p strong { color: var(--text); }
+    .about-highlights {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+    }
+    .about-highlight {
+      background: var(--bg);
+      padding: 20px;
+      border-radius: var(--radius);
+      border-left: 3px solid var(--gold);
+    }
+    .about-highlight-num {
+      font-family: var(--ff-head);
+      font-size: 26px; font-weight: 700;
+      color: var(--navy); line-height: 1;
+    }
+    .about-highlight-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
-				<!-- Project 4: Stock Analyzer -->
-				<section class="feature right">
-					<a href="https://my-stock-analyzer.streamlit.app/" class="image fit">
-						<img src="images/stock-analyzer.jpg" alt="Stock Analyzer" />
-					</a>
-					<div class="content">
-						<h3><a href="https://my-stock-analyzer.streamlit.app/">Stock Analyzer & Investment Predictor</a></h3>
-						<div class="kpis">
-							<span class="kpi">Real-time Data</span>
-							<span class="kpi">ML Predictions</span>
-							<span class="kpi">Sentiment Analysis</span>
-						</div>
-						<p>Real-time stock analysis with machine learning predictions using Random Forest, technical indicators, sentiment analysis, and investment recommendations. Features both web and command-line interfaces with live streaming data.<a href="https://my-stock-analyzer.streamlit.app/"> View Live Demo</a></p>
-					</div>
-				</section>
-			</div>
+    /* ── Skills ───────────────────────────────────── */
+    #skills { background: var(--bg); }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .skill-group {
+      background: var(--white);
+      padding: 28px 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .skill-group-title {
+      font-family: var(--ff-head);
+      font-size: 17px; font-weight: 600;
+      color: var(--navy); margin-bottom: 6px;
+    }
+    .skill-group-sub { font-size: 12px; color: var(--muted); margin-bottom: 18px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+      padding: 5px 12px; border-radius: 3px;
+      background: var(--bg); color: var(--navy);
+      border: 1px solid var(--border);
+    }
 
-			<footer class="major container medium">
-				<h3>Technical Skills & Expertise</h3>
-				<div class="row">
-					<div class="col-6 col-12-medium">
-						<h4>Programming & Analytics</h4>
-						<ul>
-							<li>Python (Pandas, NumPy, Scikit-learn)</li>
-							<li>SQL & Database Management</li>
-							<li>Statistical Analysis & Forecasting</li>
-						</ul>
-					</div>
-					<div class="col-6 col-12-medium">
-						<h4>Visualization & Deployment</h4>
-						<ul>
-							<li>Streamlit & Interactive Dashboards</li>
-							<li>Plotly, Matplotlib, Seaborn</li>
-							<li>Power BI & Tableau</li>
-						</ul>
-					</div>
-				</div>
-				<ul class="actions special">
-					<li><a href="https://github.com/vi6120" class="button">View More Projects</a></li>
-				</ul>
-			</footer>
-		</div>
+    /* ── Experience ───────────────────────────────── */
+    #experience { background: var(--white); }
+    .timeline { position: relative; max-width: 840px; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 20px; top: 8px; bottom: 8px;
+      width: 1px; background: var(--border);
+    }
+    .timeline-item { display: flex; gap: 40px; margin-bottom: 48px; position: relative; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 41px; height: 41px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1;
+    }
+    .timeline-dot-inner {
+      width: 11px; height: 11px;
+      border-radius: 50%; background: var(--gold);
+    }
+    .timeline-body { padding-top: 8px; }
+    .timeline-period {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+    }
+    .timeline-role {
+      font-family: var(--ff-head);
+      font-size: 20px; font-weight: 600;
+      color: var(--navy); line-height: 1.2; margin-bottom: 3px;
+    }
+    .timeline-company {
+      font-size: 14px; font-weight: 700; color: var(--muted); margin-bottom: 14px;
+    }
+    .timeline-bullets { padding-left: 18px; }
+    .timeline-bullets li {
+      list-style: disc;
+      font-size: 15px; color: var(--muted);
+      margin-bottom: 7px; line-height: 1.6;
+    }
+    .timeline-bullets li strong { color: var(--text); }
 
-		<!-- Footer -->
-		<div id="footer">
-			<div class="split contact">
-				<div class="alt">
-					<h3>Email</h3>
-					<p>vikasramaswamyj@gmail.com</p>
-				</div>
-				<div class="alt">
-					<h3>Location</h3>
-					<p>Munich, Germany</p>
-				</div>
-			</div>
-			<div class="container medium">
-				<ul class="icons">
-					<li><a href="https://github.com/vi6120" class="icon brands fa-github" title="GitHub Profile"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/vikasramaswamy" class="icon brands fa-linkedin" title="LinkedIn Profile"><span class="label">LinkedIn</span></a></li>
-				</ul>
+    /* ── Projects ─────────────────────────────────── */
+    #projects { background: var(--bg); }
+    .projects-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 16px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 32px;
+      transition: box-shadow var(--trans), transform var(--trans);
+      display: flex; flex-direction: column;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .project-card-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; margin-bottom: 14px;
+    }
+    .project-cat {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .project-live-dot {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; color: #2E7D32; font-weight: 700;
+    }
+    .project-live-dot::before {
+      content: '';
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #4CAF50;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .project-title {
+      font-family: var(--ff-head);
+      font-size: 20px; font-weight: 600;
+      color: var(--navy); margin-bottom: 10px; line-height: 1.25;
+    }
+    .project-desc {
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 18px; flex: 1;
+    }
+    .project-tags { margin-bottom: 20px; }
+    .project-links { display: flex; gap: 12px; margin-top: auto; }
+    .project-link {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 8px 16px; border-radius: var(--radius);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      transition: all var(--trans);
+    }
+    .project-link:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .project-link.primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .project-link.primary:hover { background: var(--gold); border-color: var(--gold); }
 
-				<ul class="copyright">
-					<li>&copy; 2025 Vikas Ramaswamy. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</div>
+    /* ── Education ────────────────────────────────── */
+    #education { background: var(--white); }
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .edu-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+    }
+    .edu-period {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .edu-degree {
+      font-family: var(--ff-head);
+      font-size: 19px; font-weight: 600;
+      color: var(--navy); margin-bottom: 4px; line-height: 1.3;
+    }
+    .edu-school { font-size: 14px; font-weight: 700; color: var(--muted); margin-bottom: 16px; }
+    .edu-details { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .edu-details strong { color: var(--text); }
+    .edu-grade {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--white);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      padding: 5px 14px; border-radius: 3px;
+    }
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    /* ── Contact ──────────────────────────────────── */
+    #contact {
+      background: var(--navy);
+      text-align: center;
+      padding: 96px 32px;
+    }
+    #contact .section-label { color: var(--gold-lt); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto 48px; }
+    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 12px 22px;
+      border-radius: var(--radius);
+      transition: all var(--trans);
+    }
+    .contact-link:hover { color: var(--white); border-color: var(--gold); background: rgba(184,150,62,0.12); }
+    .contact-link svg { width: 16px; height: 16px; }
+    .contact-email { font-family: var(--ff-head); font-size: 28px; color: rgba(255,255,255,0.9); margin-bottom: 8px; }
+    .contact-location { font-size: 14px; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; }
 
-	</body>
+    /* ── Footer ───────────────────────────────────── */
+    footer {
+      background: #080F17;
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-name { font-family: var(--ff-head); font-size: 15px; color: rgba(255,255,255,0.5); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+    /* ── Animations ───────────────────────────────── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+    @keyframes scrollLine { 0%,100% { opacity: 0.4; transform: scaleY(0.7); } 50% { opacity: 1; transform: scaleY(1); } }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    /* ── Mobile ───────────────────────────────────── */
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 64px; left: 0; right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 24px 32px; gap: 20px;
+      }
+      .nav-hamburger { display: flex; }
+      .hero-stats { gap: 28px; flex-wrap: wrap; }
+      .about-grid, .skills-grid, .projects-grid, .edu-grid { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr 1fr; }
+      .projects-header { flex-direction: column; align-items: flex-start; }
+      .container { padding: 0 20px; }
+      .section { padding: 72px 0; }
+      .timeline::before { left: 16px; }
+      .timeline-item { gap: 24px; }
+    }
+    @media (max-width: 540px) {
+      .hero-stats { display: none; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .timeline-item { gap: 16px; }
+      .timeline-body { padding-top: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Vikas <span>Ramaswamy</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="Vikas_Ramaswamy.pdf" download class="nav-cta">Download CV</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner container">
+    <p class="hero-eyebrow">Data &amp; AI Engineer · Available in Germany</p>
+    <h1 class="hero-name">Vikas<br/><em>Ramaswamy</em></h1>
+    <p class="hero-title">Building <strong>production data pipelines</strong> and <strong>AI applications</strong> that run in the real world — from SAP-connected supply chains to GitHub Apps with live external users.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">dbt · Airflow · DuckDB</span>
+      <span class="hero-badge">LangGraph · RAG · FastAPI</span>
+      <span class="hero-badge">M.Eng. BI &amp; Data Analytics · 1.91</span>
+      <span class="hero-badge">Munich, Germany</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/vi6120" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile</a>
+      <a href="https://www.linkedin.com/in/vikasramaswamy" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+      <a href="Vikas_Ramaswamy.pdf" download class="btn btn-outline">Download CV</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">5+</div>
+        <div class="hero-stat-lbl">Years experience</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">8</div>
+        <div class="hero-stat-lbl">Projects built</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-lbl">Live deployments</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">1.91</div>
+        <div class="hero-stat-lbl">Master's grade</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="section-label">About me</p>
+        <h2 class="section-title">Data engineer.<br/>AI builder.</h2>
+        <div class="divider"></div>
+        <p>I'm a Data and AI Engineer with experience across India and Germany, specialising in building production-grade data infrastructure and shipping real AI applications.</p>
+        <p>My career spans <strong>Capgemini</strong> (ETL pipelines across hybrid cloud), <strong>Mercedes-Benz</strong> (Power BI analytics for the Data Ecosystem team), and <strong>Mutares SE &amp; Co. KGaA</strong> (end-to-end dbt medallion architectures for post-merger portfolio companies).</p>
+        <p>I hold an <strong>M.Eng. in Business Intelligence &amp; Data Analytics</strong> from Hochschule Emden-Leer, graduating with an overall grade of <strong>1.91</strong> and a thesis graded <strong>1.30 (sehr gut)</strong>. I'm available immediately for full-time roles in Germany.</p>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <div class="about-highlight-num">50%</div>
+            <div class="about-highlight-lbl">Reduction in data transformation time at Mutares</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-num">40%</div>
+            <div class="about-highlight-lbl">Reduction in manual reporting effort</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-num">98.5%</div>
+            <div class="about-highlight-lbl">SLA adherence over 3 years at Capgemini</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-num">60%+</div>
+            <div class="about-highlight-lbl">Reduction in analytical query latency</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <p class="section-label">What I work with</p>
+        <h3 style="font-family:var(--ff-head);font-size:22px;font-weight:600;color:var(--navy);margin-bottom:8px;">Full-stack data &amp; AI</h3>
+        <div class="divider"></div>
+        <p style="color:var(--muted);margin-bottom:20px;font-size:15px;">Strong across the full spectrum — from warehouse design and pipeline orchestration to LLM agents with vector memory and production-grade REST APIs.</p>
+        <ul style="display:flex;flex-direction:column;gap:14px">
+          <li style="display:flex;gap:14px;align-items:flex-start">
+            <span style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;">⚙️</span>
+            <div><strong style="color:var(--navy);font-size:14px;">Data Engineering</strong><br/><span style="font-size:13px;color:var(--muted);">dbt, Airflow, DuckDB, Parquet, Spark, Postgres, SAP pipelines</span></div>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start">
+            <span style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;">🤖</span>
+            <div><strong style="color:var(--navy);font-size:14px;">AI &amp; LLM Engineering</strong><br/><span style="font-size:13px;color:var(--muted);">LangGraph, LangChain, RAG, pgvector, Groq, Azure OpenAI</span></div>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start">
+            <span style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;">📊</span>
+            <div><strong style="color:var(--navy);font-size:14px;">Analytics &amp; BI</strong><br/><span style="font-size:13px;color:var(--muted);">Power BI, Streamlit, Plotly, Tableau, Python analytics</span></div>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start">
+            <span style="flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;">🚀</span>
+            <div><strong style="color:var(--navy);font-size:14px;">Backend &amp; Deployment</strong><br/><span style="font-size:13px;color:var(--muted);">FastAPI, React, Docker, GitHub Actions, Vercel, Railway</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Skills ─────────────────────────────────────── -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:56px">
+      <p class="section-label">Technical expertise</p>
+      <h2 class="section-title">Skills &amp; tools</h2>
+      <div class="divider" style="margin:0 auto 0"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Data Engineering</div>
+        <div class="skill-group-sub">Pipeline, transformation &amp; warehouse</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span><span class="skill-tag">SQL (Advanced)</span>
+          <span class="skill-tag">dbt</span><span class="skill-tag">Apache Airflow</span>
+          <span class="skill-tag">DuckDB</span><span class="skill-tag">Apache Spark</span>
+          <span class="skill-tag">PostgreSQL</span><span class="skill-tag">Parquet / PyArrow</span>
+          <span class="skill-tag">SAP MM/SD/WM</span><span class="skill-tag">Kafka</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay:0.1s">
+        <div class="skill-group-title">AI &amp; LLM Stack</div>
+        <div class="skill-group-sub">Agents, retrieval &amp; inference</div>
+        <div class="skill-tags">
+          <span class="skill-tag">LangGraph</span><span class="skill-tag">LangChain</span>
+          <span class="skill-tag">RAG</span><span class="skill-tag">pgvector</span>
+          <span class="skill-tag">FAISS</span><span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Groq API</span><span class="skill-tag">Azure OpenAI</span>
+          <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow / Lite</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay:0.15s">
+        <div class="skill-group-title">Cloud &amp; Platforms</div>
+        <div class="skill-group-sub">Infrastructure &amp; BI tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure Data Factory</span><span class="skill-tag">Microsoft Fabric</span>
+          <span class="skill-tag">Power BI</span><span class="skill-tag">Databricks</span>
+          <span class="skill-tag">SAP HANA</span><span class="skill-tag">Supabase</span>
+          <span class="skill-tag">Vercel</span><span class="skill-tag">Railway</span>
+          <span class="skill-tag">Neo4j</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay:0.2s">
+        <div class="skill-group-title">Frameworks &amp; Dev</div>
+        <div class="skill-group-sub">Backend, frontend &amp; operations</div>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span><span class="skill-tag">React (Vite)</span>
+          <span class="skill-tag">Streamlit</span><span class="skill-tag">Flask</span>
+          <span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span><span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">GitHub Apps (JWT)</span><span class="skill-tag">Agile / Scrum</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Experience ─────────────────────────────────── -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:56px">
+      <p class="section-label">Career</p>
+      <h2 class="section-title">Work experience</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-body">
+          <p class="timeline-period">Jul 2024 – Aug 2025</p>
+          <h3 class="timeline-role">Analytics Engineer (Working Student)</h3>
+          <p class="timeline-company">Mutares SE &amp; Co. KGaA &nbsp;·&nbsp; Munich, Germany</p>
+          <ul class="timeline-bullets">
+            <li>Built end-to-end data pipelines across <strong>5+ post-merger portfolio companies</strong>, unifying heterogeneous source systems into dbt medallion layers.</li>
+            <li>Automated JSON processing, cutting transformation time by <strong>50%</strong>, and reduced manual reporting effort by <strong>40%</strong>.</li>
+            <li>Implemented Git-versioned dbt transformations with <strong>28 automated data quality tests</strong>, eliminating reconciliation errors across 5+ reporting streams.</li>
+            <li>Deployed a FastAPI + LLaMA 3.3 70B AI advisor (live context from gold-layer tables) and a React dashboard with 8 pages of supply chain metrics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:0.1s">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-body">
+          <p class="timeline-period">Oct 2023 – Mar 2024</p>
+          <h3 class="timeline-role">Business Analyst (Intern)</h3>
+          <p class="timeline-company">Mercedes-Benz Group AG &nbsp;·&nbsp; Stuttgart, Germany</p>
+          <ul class="timeline-bullets">
+            <li>Built Power BI dashboards and SQL datasets for the Data Ecosystem team, providing direct visibility into <strong>Azure Cloud infrastructure cost allocation</strong> and enabling a <strong>15% reduction</strong> in identified wasted spend.</li>
+            <li>Standardised KPI frameworks for the Platform Service Desk and product teams, <strong>accelerating decision cycles by 25%</strong>.</li>
+            <li>Used Atlassian Suite (Confluence, Jira), Power BI, and Databricks to analyse and present platform usage data to multiple stakeholders.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:0.2s">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-body">
+          <p class="timeline-period">Sep 2019 – Aug 2022</p>
+          <h3 class="timeline-role">Sr Analyst / Software Engineer</h3>
+          <p class="timeline-company">Capgemini Technology Services India &nbsp;·&nbsp; Bengaluru, India</p>
+          <ul class="timeline-bullets">
+            <li>Maintained production ETL pipelines with CI/CD practices across hybrid cloud architectures, achieving <strong>98.5% SLA adherence</strong> over 3 years.</li>
+            <li>Partnered with data scientists to deliver demand forecasting models that <strong>improved forecast accuracy by 40%</strong>, and engineered executive KPI frameworks that cut manual reporting dependencies by <strong>65%</strong>.</li>
+            <li>Engineered an end-to-end live pipeline from ERP to live dashboards via SAP BW, SAP SLT, and Kafka, <strong>reducing latency by over 50%</strong>.</li>
+            <li>Designed OLAP query optimisations that cut analytical query latency by <strong>60%+</strong> across Power BI dashboards used by executive leadership.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ───────────────────────────────────── -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="projects-header reveal">
+      <div>
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="divider"></div>
+      </div>
+      <a href="https://github.com/vi6120" target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-end">All on GitHub →</a>
+    </div>
+    <div class="projects-grid">
+
+      <!-- 1. SupplyIQ -->
+      <div class="project-card reveal">
+        <div class="project-card-top">
+          <span class="project-cat">Data Engineering · AI</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">SupplyIQ — Supply Chain Analytics Platform</h3>
+        <p class="project-desc">Production-grade end-to-end pipeline simulating SAP MM/SD/WM operations. Airflow orchestration, 16-model dbt medallion on DuckDB, FastAPI backend with 14 endpoints, React dashboard (8 pages), and a Groq-powered AI advisor grounded in live gold-layer data.</p>
+        <div class="project-tags">
+          <span class="tag eng">dbt</span><span class="tag eng">Airflow</span><span class="tag eng">DuckDB</span>
+          <span class="tag ai">LangGraph</span><span class="tag ai">LLaMA 3.3</span>
+          <span class="tag">FastAPI</span><span class="tag">React</span>
+        </div>
+        <div class="project-links">
+          <a href="https://supplyiq-bice.vercel.app" target="_blank" rel="noopener" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/vi6120/Supply-Chain-Analytics-Platform" target="_blank" rel="noopener" class="project-link">GitHub</a>
+          <a href="https://supplyiq-4tkt.onrender.com/docs" target="_blank" rel="noopener" class="project-link">API Docs</a>
+        </div>
+      </div>
+
+      <!-- 2. PR Review Bot -->
+      <div class="project-card reveal" style="transition-delay:0.08s">
+        <div class="project-card-top">
+          <span class="project-cat">AI · GitHub App</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">PR Review Bot — Automated Code Reviews</h3>
+        <p class="project-desc">GitHub App that reviews every Pull Request using 3 parallel LangGraph AI agents (code quality, security, performance). Features @mention multi-turn chat, per-repo review memory via Supabase pgvector, and zero-configuration onboarding. Running at $0/month on free tiers.</p>
+        <div class="project-tags">
+          <span class="tag ai">LangGraph</span><span class="tag ai">LLaMA 3.3</span><span class="tag ai">RAG</span>
+          <span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag eng">pgvector</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vi6120/pr-review-bot" target="_blank" rel="noopener" class="project-link primary">Install App</a>
+          <a href="https://github.com/vi6120/pr-review-bot" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 3. Stock Analyzer -->
+      <div class="project-card reveal" style="transition-delay:0.12s">
+        <div class="project-card-top">
+          <span class="project-cat">Machine Learning · Analytics</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">Stock Analyzer &amp; Investment Predictor</h3>
+        <p class="project-desc">Real-time stock analysis combining Random Forest ML, technical indicators (RSI, MACD, moving averages), and dual sentiment analysis into a 9-point scoring system. Produces STRONG BUY / SELL recommendations with live data from Yahoo Finance.</p>
+        <div class="project-tags">
+          <span class="tag ml">Random Forest</span><span class="tag ml">Sentiment NLP</span>
+          <span class="tag">Streamlit</span><span class="tag">yfinance</span><span class="tag">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://my-stock-analyzer.streamlit.app" target="_blank" rel="noopener" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/vi6120/stock_analyzer_project" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 4. Customer Churn -->
+      <div class="project-card reveal" style="transition-delay:0.16s">
+        <div class="project-card-top">
+          <span class="project-cat">Machine Learning</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">Customer Churn Analysis &amp; Prediction</h3>
+        <p class="project-desc">End-to-end ML pipeline comparing Logistic Regression, Random Forest, and XGBoost for predicting customer churn. Full EDA in Jupyter notebooks, interactive Streamlit dashboard with real-time prediction, and actionable business retention recommendations.</p>
+        <div class="project-tags">
+          <span class="tag ml">XGBoost</span><span class="tag ml">Random Forest</span>
+          <span class="tag ml">Logistic Regression</span>
+          <span class="tag">Streamlit</span><span class="tag">scikit-learn</span>
+        </div>
+        <div class="project-links">
+          <a href="https://my-customer-churn-analysis.streamlit.app" target="_blank" rel="noopener" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/vi6120/customer-churn-analysis" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 5. Supply Chain Streamlit -->
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="project-card-top">
+          <span class="project-cat">Analytics · Forecasting</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">Supply Chain &amp; Inventory Optimization Dashboard</h3>
+        <p class="project-desc">Streamlit analytics dashboard with Prophet and ARIMA demand forecasting, service-level driven safety stock planning, interactive cost vs. service trade-off slider, multi-scenario comparison (85%–99.9%), and automated reorder alerts. Co-developed with Arvind Dharanidharan.</p>
+        <div class="project-tags">
+          <span class="tag ml">Prophet</span><span class="tag ml">ARIMA</span>
+          <span class="tag">Streamlit</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://supply-chain-inventory-optimization.streamlit.app" target="_blank" rel="noopener" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/vi6120/supply-chain-analytics" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 6. Financial Analytics -->
+      <div class="project-card reveal" style="transition-delay:0.24s">
+        <div class="project-card-top">
+          <span class="project-cat">Analytics · Finance</span>
+          <span class="project-live-dot">Live</span>
+        </div>
+        <h3 class="project-title">Financial Analytics Dashboard</h3>
+        <p class="project-desc">Professional-grade financial analysis platform featuring live stock data, technical indicators (RSI, MACD, Bollinger Bands), portfolio tracking, and price forecasting with Prophet and ARIMA. Clean interactive charts built on Plotly.</p>
+        <div class="project-tags">
+          <span class="tag ml">Prophet</span><span class="tag ml">ARIMA</span>
+          <span class="tag">Streamlit</span><span class="tag">yfinance</span><span class="tag">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://my-finance-overview.streamlit.app" target="_blank" rel="noopener" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/vi6120/financial-analytics-dashboard" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 7. Pneumonia Detection -->
+      <div class="project-card reveal" style="transition-delay:0.28s">
+        <div class="project-card-top">
+          <span class="project-cat">Deep Learning · Medical AI</span>
+          <span class="tag research" style="font-size:10px">Research</span>
+        </div>
+        <h3 class="project-title">Pneumonia Detection from Chest X-Rays</h3>
+        <p class="project-desc">CNN-based pneumonia classifier using Transfer Learning (Inception/ImageNet) on the Kaggle chest X-ray dataset. Deployed via TensorFlow Lite for edge inference. References published research in Computational Intelligence and Neuroscience, 2022.</p>
+        <div class="project-tags">
+          <span class="tag ml">CNN</span><span class="tag ml">Transfer Learning</span>
+          <span class="tag">TF Lite</span><span class="tag">Keras</span><span class="tag">Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vi6120/Pneumonia-Detection" target="_blank" rel="noopener" class="project-link primary">GitHub</a>
+        </div>
+      </div>
+
+      <!-- 8. Magic Wand -->
+      <div class="project-card reveal" style="transition-delay:0.32s">
+        <div class="project-card-top">
+          <span class="project-cat">TinyML · Embedded AI</span>
+          <span class="tag research" style="font-size:10px">Research</span>
+        </div>
+        <h3 class="project-title">Magic Wand — Gesture Recognition on Arduino</h3>
+        <p class="project-desc">End-to-end TinyML pipeline on Arduino Nano 33 BLE Sense: gesture capture via WebBluetooth API, model training in Google Colab with TensorFlow, and deployment with TensorFlow Lite Micro. Recognises hand-drawn digits 0–9 from accelerometer and gyroscope data.</p>
+        <div class="project-tags">
+          <span class="tag research">TinyML</span><span class="tag research">TF Lite Micro</span>
+          <span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">C++</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vi6120/ML23-13-Magic-Wand" target="_blank" rel="noopener" class="project-link primary">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Education ──────────────────────────────────── -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:48px">
+      <p class="section-label">Academic background</p>
+      <h2 class="section-title">Education</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <p class="edu-period">Sep 2022 – Aug 2025</p>
+        <h3 class="edu-degree">M.Eng. Business Intelligence &amp; Data Analytics</h3>
+        <p class="edu-school">Hochschule Emden-Leer &nbsp;·&nbsp; Emden, Germany</p>
+        <div class="edu-details">
+          <p><strong>Overall grade:</strong> 1.91 (gut) &nbsp;|&nbsp; <strong>Thesis grade:</strong> 1.30 (sehr gut)</p>
+          <p style="margin-top:8px"><strong>Thesis:</strong> Business Management Framework for Integrating Predictive Analytics into Financial Operations Using Power BI</p>
+          <p style="margin-top:8px"><strong>Notable modules:</strong> Digitalization &amp; Automation (1.0), Business Management (1.0), Strategic Management (1.3), Communication &amp; Culture (1.7)</p>
+        </div>
+        <span class="edu-grade">Grade 1.91 / sehr gut thesis</span>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.1s">
+        <p class="edu-period">Jun 2015 – Jun 2019</p>
+        <h3 class="edu-degree">B.Eng. Mechanical Engineering</h3>
+        <p class="edu-school">Visvesvaraya Technological University &nbsp;·&nbsp; Belagavi, Karnataka, India</p>
+        <div class="edu-details">
+          <p>Foundation in engineering mathematics, systems thinking, and technical problem-solving that underpins my approach to data infrastructure and software design.</p>
+          <p style="margin-top:10px"><strong>Certifications:</strong></p>
+          <p>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate — Valid until Sep 2027</p>
+        </div>
+        <span class="edu-grade">Oracle OCI AI Foundations 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label" style="text-align:center">Get in touch</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:12px">Available immediately<br/>in Germany</h2>
+    <p class="section-subtitle" style="text-align:center;color:rgba(255,255,255,0.6);margin:0 auto 48px">Open to full-time roles in data engineering, analytics engineering, and AI engineering across Germany. Fluent in English (C1), conversational German (A2).</p>
+    <p class="contact-email">vikasramaswamyj@gmail.com</p>
+    <p class="contact-location" style="margin-bottom:40px">📍 Munich, Germany &nbsp;·&nbsp; +49 163 548 3706</p>
+    <div class="contact-links">
+      <a href="mailto:vikasramaswamyj@gmail.com" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email me
+      </a>
+      <a href="https://www.linkedin.com/in/vikasramaswamy" target="_blank" rel="noopener" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/vi6120" target="_blank" rel="noopener" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="Vikas_Ramaswamy.pdf" download class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer>
+  <span class="footer-name">Vikas Ramaswamy</span>
+  <span class="footer-copy">© 2025 · Munich, Germany · Available immediately</span>
+</footer>
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Scroll reveal via IntersectionObserver
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
