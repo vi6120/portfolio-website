@@ -1,164 +1,141 @@
-# Vikas Ramaswamy - Data Analyst Portfolio
+# Vikas Ramaswamy — Data & AI Engineer Portfolio
 
-A professional portfolio website showcasing data analytics and machine learning projects.
+Personal portfolio website showcasing production data pipelines, AI applications, and analytics projects built across Germany and India.
 
-## Live Projects Featured
+**Live site** → [vi6120.github.io/portfolio-website](https://vi6120.github.io/portfolio-website/)
 
-### 1. Supply Chain & Inventory Optimization Analytics
-- **Tech Stack**: Python, Streamlit, Pandas, Prophet, ARIMA
-- **Features**: Demand forecasting, inventory optimization, supplier performance tracking
-- **Highlights**: Real-time dashboard with KPI monitoring and reorder optimization
+---
 
-### 2. Financial Analytics Dashboard
-- **Live Demo**: [https://my-finance-overview.streamlit.app/](https://my-finance-overview.streamlit.app/)
-- **Tech Stack**: Python, Streamlit, yfinance, Plotly, Prophet
-- **Features**: Stock analysis, technical indicators, portfolio management, price forecasting
-- **Highlights**: Interactive charts with RSI, MACD, Bollinger Bands
+## Projects
 
-### 3. Customer Churn Analysis
-- **Live Demo**: [https://my-customer-churn-analysis.streamlit.app](https://my-customer-churn-analysis.streamlit.app)
-- **Tech Stack**: Python, Scikit-learn, XGBoost, Streamlit
-- **Features**: ML-based churn prediction, business insights, interactive dashboard
-- **Highlights**: Multiple ML models with performance comparison
+### 1. SupplyIQ — Supply Chain Analytics Platform
+- **Live demo**: [supplyiq-bice.vercel.app](https://supplyiq-bice.vercel.app) · **API docs**: [supplyiq-4tkt.onrender.com/docs](https://supplyiq-4tkt.onrender.com/docs)
+- **Stack**: Python · dbt · DuckDB · Apache Airflow · FastAPI · React · Groq / LLaMA 3.3 70B
+- **What it does**: End-to-end production pipeline simulating SAP MM/SD/WM operations. Airflow orchestrates daily ingestion; 16 dbt models across bronze/silver/gold layers; 14 FastAPI endpoints; 8-page React dashboard; AI advisor grounded in live gold-layer data via LangGraph.
 
-### 4. Stock Analyzer & Investment Predictor
-- **Live Demo**: [https://my-stock-analyzer.streamlit.app/](https://my-stock-analyzer.streamlit.app/)
-- **Tech Stack**: Python, Random Forest, yfinance, Sentiment Analysis
-- **Features**: Real-time stock analysis, ML predictions, investment recommendations
-- **Highlights**: Sentiment-enhanced predictions with live streaming data
+### 2. PR Review Bot — Automated GitHub Code Reviews
+- **Repo**: [github.com/vi6120/pr-review-bot](https://github.com/vi6120/pr-review-bot)
+- **Stack**: LangGraph · LLaMA 3.3 70B · FastAPI · Supabase (pgvector) · Railway
+- **What it does**: GitHub App that reviews every PR using 3 parallel AI agents (code quality, security, performance). Features @mention multi-turn chat, per-repo memory via pgvector, and zero-configuration install. Runs at $0/month on free tiers.
+
+### 3. Stock Analyzer & Investment Predictor
+- **Live demo**: [my-stock-analyzer.streamlit.app](https://my-stock-analyzer.streamlit.app)
+- **Stack**: Python · Random Forest · yfinance · VADER Sentiment · Streamlit · Flask
+- **What it does**: Real-time stock analysis combining ML predictions, technical indicators (RSI, MACD, moving averages), and dual sentiment analysis into a 9-point scoring system producing STRONG BUY / SELL recommendations.
+
+### 4. Customer Churn Analysis & Prediction
+- **Live demo**: [my-customer-churn-analysis.streamlit.app](https://my-customer-churn-analysis.streamlit.app)
+- **Stack**: Python · scikit-learn · XGBoost · Streamlit · Jupyter
+- **What it does**: End-to-end ML pipeline comparing Logistic Regression, Random Forest, and XGBoost for churn prediction. Full EDA notebooks, interactive Streamlit dashboard, and actionable retention recommendations.
+
+### 5. Supply Chain & Inventory Optimization Dashboard
+- **Live demo**: [supply-chain-inventory-optimization.streamlit.app](https://supply-chain-inventory-optimization.streamlit.app)
+- **Stack**: Python · Streamlit · Prophet · ARIMA · Plotly · scikit-learn
+- **What it does**: Demand forecasting dashboard with service-level driven safety stock planning, interactive cost-vs-service trade-off slider, multi-scenario comparison (85%–99.9%), and automated reorder alerts.
+
+### 6. Financial Analytics Dashboard
+- **Live demo**: [my-finance-overview.streamlit.app](https://my-finance-overview.streamlit.app)
+- **Stack**: Python · Streamlit · yfinance · Plotly · Prophet · ARIMA
+- **What it does**: Professional-grade financial analysis with live stock data, technical indicators (RSI, MACD, Bollinger Bands), portfolio tracking, and price forecasting.
+
+### 7. Pneumonia Detection from Chest X-Rays
+- **Repo**: [github.com/vi6120/Pneumonia-Detection](https://github.com/vi6120/Pneumonia-Detection)
+- **Stack**: Python · TensorFlow Lite · Keras · Inception / ImageNet · C++
+- **What it does**: CNN-based pneumonia classifier using Transfer Learning on the Kaggle chest X-ray dataset. Deployed via TensorFlow Lite for edge inference. References: *Computational Intelligence and Neuroscience*, 2022.
+
+### 8. Magic Wand — Gesture Recognition on Arduino
+- **Repo**: [github.com/vi6120/ML23-13-Magic-Wand](https://github.com/vi6120/ML23-13-Magic-Wand)
+- **Stack**: Python · TensorFlow Lite Micro · Arduino (C++) · WebBluetooth API
+- **What it does**: End-to-end TinyML pipeline on Arduino Nano 33 BLE Sense — gesture capture via WebBluetooth, model training in Google Colab, deployment with TF Lite Micro. Recognises hand-drawn digits 0–9 from accelerometer and gyroscope data.
+
+---
 
 ## Technical Skills
 
-### Programming & Analytics
-- **Python**: Pandas, NumPy, Scikit-learn, Statsmodels
-- **SQL**: Database management and complex queries
-- **Machine Learning**: Supervised/Unsupervised learning, Time Series
-- **Statistical Analysis**: Forecasting, A/B Testing, Hypothesis Testing
+| Area | Technologies |
+|---|---|
+| Data Engineering | Python, SQL, dbt, Apache Airflow, DuckDB, Spark, PostgreSQL, SAP MM/SD/WM, Kafka |
+| AI & LLM | LangGraph, LangChain, RAG, pgvector, FAISS, HuggingFace, Groq, Azure OpenAI |
+| Cloud & Platforms | Azure Data Factory, Microsoft Fabric, Power BI, Databricks, SAP HANA, Supabase |
+| Frameworks | FastAPI, React (Vite + Tailwind), Streamlit, Flask, PyTorch, TensorFlow/Lite |
+| Dev & Ops | Git, Docker, GitHub Actions, GitHub Apps (JWT/Webhooks), Vercel, Railway, Agile |
 
-### Visualization & Deployment
-- **Dashboards**: Streamlit, Flask, Interactive web applications
-- **Visualization**: Plotly, Matplotlib, Seaborn, Power BI, Tableau
-- **Cloud Deployment**: Streamlit Cloud, Heroku, AWS
-- **Version Control**: Git, GitHub
+---
 
 ## Project Structure
 
 ```
 portfolio-website/
-├── index.html              # Main portfolio page
-├── assets/
-│   ├── css/
-│   │   └── main.css        # Styling
-│   ├── js/
-│   │   └── main.js         # Interactions
-│   └── images/             # Project images
-├── README.md               # This file
-└── deploy.md              # Deployment guide
+├── index.html          # Single-file portfolio (all CSS and JS embedded)
+├── Vikas_Ramaswamy.pdf # CV — linked from the Download CV button
+├── images/             # Optional project screenshots
+│   ├── supplyiq.jpg
+│   ├── pr-review-bot.jpg
+│   ├── stock-analyzer.jpg
+│   └── ...
+├── README.md           # This file
+└── deploy.md           # Deployment guide
 ```
-
-## Quick Start
-
-1. **Clone or download** this repository
-2. **Open** `index.html` in your browser
-3. **Customize** content in `index.html`
-4. **Replace** images in `assets/images/`
-5. **Deploy** to GitHub Pages, Netlify, or Vercel
-
-## Customization
-
-### Update Project Information
-Edit the project sections in `index.html`:
-- Project titles and descriptions
-- GitHub repository links
-- Live demo URLs
-- Technology stacks
-
-### Modify Styling
-Edit `assets/css/main.css`:
-- Color scheme (currently using blue gradient)
-- Typography and spacing
-- Responsive breakpoints
-
-### Add New Projects
-Follow the existing pattern in `index.html`:
-```html
-<section class="feature left">
-    <a href="project-link" class="image fit">
-        <img src="images/project-image.jpg" alt="Project Name" />
-    </a>
-    <div class="content">
-        <h3><a href="project-link">Project Title</a></h3>
-        <p>Project description with technologies used.<a href="project-link"> View Project</a></p>
-    </div>
-</section>
-```
-
-## Responsive Design
-
-The portfolio is fully responsive and works on:
-- Desktop computers
-- Tablets
-- Mobile phones
-- All modern browsers
-
-## Deployment Options
-
-### GitHub Pages (Free)
-1. Push to GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Select source branch (main/master)
-
-### Netlify (Free)
-1. Connect GitHub repository
-2. Auto-deploy on commits
-3. Custom domain support
-
-### Vercel (Free)
-1. Import from GitHub
-2. Automatic deployments
-3. Performance optimized
-
-## Analytics Integration
-
-Add Google Analytics by including this in `<head>`:
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-```
-
-## Performance Optimization
-
-- Optimized CSS and JavaScript
-- Compressed images recommended
-- Lazy loading for images
-- Minimal external dependencies
-
-## Contact Information
-
-Update contact details in the footer section:
-- Email address
-- Location
-- LinkedIn profile
-- GitHub profile
-
-## License
-
-This portfolio template is open source and available under the MIT License.
-
-## Credits
-
-- Design inspired by HTML5 UP templates
-- Icons and styling customized for data analytics portfolio
-- Responsive design principles applied
 
 ---
 
-**Author**: Vikas Ramaswamy  
-**Portfolio**: Data Analyst & Machine Learning Engineer  
-**Location**: Munich, Germany
+## Local Development
+
+No build step required — it's a single static HTML file.
+
+```bash
+# Clone the repo
+git clone https://github.com/vi6120/portfolio-website.git
+cd portfolio-website
+
+# Serve locally (Python)
+python3 -m http.server 8000
+# → open http://localhost:8000
+```
+
+---
+
+## Deployment
+
+### GitHub Pages (recommended)
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
+Then: **Settings → Pages → Source: Deploy from branch → main → Save**
+
+Your site will be live at `https://vi6120.github.io/portfolio-website/`
+
+### Netlify (drag & drop)
+Zip the folder and drag it to [netlify.com](https://netlify.com/drop) — instant deploy, no account needed.
+
+### Vercel
+```bash
+npx vercel --prod
+```
+
+Full instructions in [`deploy.md`](./deploy.md).
+
+---
+
+## CV Download
+
+Place `Vikas_Ramaswamy.pdf` in the root of the repository alongside `index.html`. The **Download CV** button in the nav and hero sections will serve it automatically.
+
+---
+
+## Contact
+
+| | |
+|---|---|
+| Email | vikasramaswamyj@gmail.com |
+| LinkedIn | [linkedin.com/in/vikasramaswamy](https://www.linkedin.com/in/vikasramaswamy) |
+| GitHub | [github.com/vi6120](https://github.com/vi6120) |
+| Location | Munich, Germany |
+| Availability | Immediately |
+
+---
+
+**Author**: Vikas Ramaswamy · Data & AI Engineer  
+**License**: MIT
