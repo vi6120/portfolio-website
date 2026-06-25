@@ -1,4 +1,4 @@
-# Vikas Ramaswamy — Data & AI Engineer Portfolio
+# Vikas Ramaswamy | Data & AI Engineer Portfolio
 
 Personal portfolio website showcasing production data pipelines, AI applications, and analytics projects built across Germany and India.
 
