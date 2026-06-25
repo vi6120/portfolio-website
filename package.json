@@ -1,7 +1,7 @@
 {
   "name": "vikas-ramaswamy-portfolio",
   "version": "1.0.0",
-  "description": "Professional portfolio website for Vikas Ramaswamy - Data Analyst",
+  "description": "Professional portfolio website for Vikas Ramaswamy",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
