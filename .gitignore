@@ -18,6 +18,3 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
-
-# Local AI assistant config
-.claude/
