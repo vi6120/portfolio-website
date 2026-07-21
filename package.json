@@ -1,0 +1,31 @@
+{
+  "name": "vikas-ramaswamy-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Vikas Ramaswamy",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'See deploy.md for deployment instructions'"
+  },
+  "keywords": [
+    "portfolio",
+    "data-analyst",
+    "python",
+    "Sql",
+    "PowerBI",
+    "Tableau",
+    "Excel",
+    "analytics"
+  ],
+  "author": "Vikas Ramaswamy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vi6120"
+  },
+  "homepage": "https://vi6120.github.io/portfolio-website/",
+  "devDependencies": {},
+  "dependencies": {}
+}
