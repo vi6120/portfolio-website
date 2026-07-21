@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vikas Ramaswamy | Data & AI Engineer</title>
-  <meta name="description" content="Vikas Ramaswamy — Data Engineer, Analytics Engineer and AI Engineer. Production pipelines, LLM applications, and analytics systems." />
+  <meta name="description" content="Vikas Ramaswamy: Data Engineer, Analytics Engineer and AI Engineer. Production pipelines, LLM applications, and analytics systems." />
   <meta name="author" content="Vikas Ramaswamy" />
   <meta property="og:title" content="Vikas Ramaswamy | Data & AI Engineer" />
   <meta property="og:description" content="Building production data pipelines and AI applications. dbt · Airflow · LangGraph · FastAPI." />
@@ -570,6 +570,18 @@
     @keyframes scrollLine { 0%,100% { opacity: 0.4; transform: scaleY(0.7); } 50% { opacity: 1; transform: scaleY(1); } }
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
+    /* ── Wide screens ─────────────────────────────── */
+    @media (min-width: 1440px) {
+      :root { --max-w: 1320px; }
+      .skills-grid { grid-template-columns: repeat(4, 1fr); }
+      .projects-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1920px) {
+      :root { --max-w: 1600px; }
+      .hero-title, .section-subtitle { max-width: 720px; }
+      .timeline { max-width: 1040px; }
+    }
+
     /* ── Mobile ───────────────────────────────────── */
     @media (max-width: 860px) {
       .nav-links { display: none; }
@@ -641,7 +653,7 @@
   <div class="hero-inner container">
     <p class="hero-eyebrow">Data &amp; AI Engineer · Available in Germany</p>
     <h1 class="hero-name">Vikas<br/><em>Ramaswamy</em></h1>
-    <p class="hero-title">Building <strong>production data pipelines</strong> and <strong>AI applications</strong> that run in the real world from SAP-connected supply chains to GitHub Apps with live external users.</p>
+    <p class="hero-title">Building <strong>production data pipelines</strong> and <strong>AI applications</strong> that run in the real world from SAP connected supply chains to GitHub Apps with live external users.</p>
     <div class="hero-badges">
       <span class="hero-badge">dbt · Airflow · DuckDB</span>
       <span class="hero-badge">LangGraph · RAG · FastAPI</span>
@@ -689,9 +701,9 @@
         <p class="section-label">About me</p>
         <h2 class="section-title">Data engineer.<br/>AI builder.</h2>
         <div class="divider"></div>
-        <p>I'm a Data and AI Engineer with experience across India and Germany, specialising in building production-grade data infrastructure and shipping real AI applications.</p>
-        <p>My career spans <strong>Capgemini</strong> (ETL pipelines across hybrid cloud), <strong>Mercedes-Benz</strong> (Power BI analytics for the Data Ecosystem team), and <strong>Mutares SE &amp; Co. KGaA</strong> (end-to-end dbt medallion architectures for post-merger portfolio companies).</p>
-        <p>I hold an <strong>M.Eng. in Business Intelligence &amp; Data Analytics</strong> from Hochschule Emden-Leer, graduating with an overall grade of <strong>1.91</strong> and a thesis graded <strong>1.30 (sehr gut)</strong>. I'm available immediately for full-time roles in Germany.</p>
+        <p>I'm a Data and AI Engineer with experience across India and Germany, specialising in building production grade data infrastructure and shipping real AI applications.</p>
+        <p>My career spans <strong>Capgemini</strong> (ETL pipelines across hybrid cloud), <strong>Mercedes-Benz</strong> (Power BI analytics for the Data Ecosystem team), and <strong>Mutares SE &amp; Co. KGaA</strong> (end to end dbt medallion architectures for post merger portfolio companies).</p>
+        <p>I hold an <strong>M.Eng. in Business Intelligence &amp; Data Analytics</strong> from Hochschule Emden-Leer, graduating with an overall grade of <strong>1.91</strong> and a thesis graded <strong>1.30 (sehr gut)</strong>. I'm available immediately for full time roles in Germany.</p>
         <div class="about-highlights">
           <div class="about-highlight">
             <div class="about-highlight-num">50%</div>
@@ -713,9 +725,9 @@
       </div>
       <div class="reveal" style="transition-delay:0.15s;display:flex;flex-direction:column;gap:0">
         <p class="section-label">What I work with</p>
-        <h3 style="font-family:var(--ff-head);font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px;">Full-stack data &amp; AI</h3>
+        <h3 style="font-family:var(--ff-head);font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px;">Full stack data &amp; AI</h3>
         <div class="divider"></div>
-        <p style="color:var(--muted);margin-bottom:24px;font-size:15px;">Strong across the full spectrum — from warehouse design and pipeline orchestration to LLM agents with vector memory and production-grade REST APIs.</p>
+        <p style="color:var(--muted);margin-bottom:24px;font-size:15px;">Strong across the full spectrum, from warehouse design and pipeline orchestration to LLM agents with vector memory and production grade REST APIs.</p>
         <ul style="display:flex;flex-direction:column;gap:0;background:var(--card);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:24px;">
           <li style="display:flex;gap:16px;align-items:flex-start;padding:16px 20px;border-bottom:1px solid var(--border);">
             <span style="flex-shrink:0;width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;margin-top:1px;">
@@ -846,10 +858,10 @@
           <h3 class="timeline-role">Analytics Engineer (Working Student)</h3>
           <p class="timeline-company">Mutares SE &amp; Co. KGaA &nbsp;·&nbsp; Munich, Germany</p>
           <ul class="timeline-bullets">
-            <li>Built end-to-end data pipelines across <strong>5+ post-merger portfolio companies</strong>, unifying heterogeneous source systems into dbt medallion layers.</li>
+            <li>Built end to end data pipelines across <strong>5+ post merger portfolio companies</strong>, unifying heterogeneous source systems into dbt medallion layers.</li>
             <li>Automated JSON processing, cutting transformation time by <strong>50%</strong>, and reduced manual reporting effort by <strong>40%</strong>.</li>
-            <li>Implemented Git-versioned dbt transformations with <strong>28 automated data quality tests</strong>, eliminating reconciliation errors across 5+ reporting streams.</li>
-            <li>Deployed a FastAPI + LLaMA 3.3 70B AI advisor (live context from gold-layer tables) and a React dashboard with 8 pages of supply chain metrics.</li>
+            <li>Implemented Git versioned dbt transformations with <strong>28 automated data quality tests</strong>, eliminating reconciliation errors across 5+ reporting streams.</li>
+            <li>Deployed a FastAPI + LLaMA 3.3 70B AI advisor (live context from gold layer tables) and a React dashboard with 8 pages of supply chain metrics.</li>
           </ul>
         </div>
       </div>
@@ -877,7 +889,7 @@
           <ul class="timeline-bullets">
             <li>Maintained production ETL pipelines with CI/CD practices across hybrid cloud architectures, achieving <strong>98.5% SLA adherence</strong> over 3 years.</li>
             <li>Partnered with data scientists to deliver demand forecasting models that <strong>improved forecast accuracy by 40%</strong>, and engineered executive KPI frameworks that cut manual reporting dependencies by <strong>65%</strong>.</li>
-            <li>Engineered an end-to-end live pipeline from ERP to live dashboards via SAP BW, SAP SLT, and Kafka, <strong>reducing latency by over 50%</strong>.</li>
+            <li>Engineered an end to end live pipeline from ERP to live dashboards via SAP BW, SAP SLT, and Kafka, <strong>reducing latency by over 50%</strong>.</li>
             <li>Designed OLAP query optimisations that cut analytical query latency by <strong>60%+</strong> across Power BI dashboards used by executive leadership.</li>
           </ul>
         </div>
@@ -909,7 +921,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">SupplyIQ: A Supply Chain Analytics Platform</h3>
-        <p class="project-desc">Production-grade end-to-end pipeline simulating SAP MM/SD/WM operations. Airflow orchestration, 16-model dbt medallion on DuckDB, FastAPI backend with 14 endpoints, React dashboard (8 pages), and a Groq-powered AI advisor grounded in live gold-layer data.</p>
+        <p class="project-desc">Production grade end to end pipeline simulating SAP MM/SD/WM operations. Airflow orchestration, 16 model dbt medallion on DuckDB, FastAPI backend with 14 endpoints, React dashboard (8 pages), and a Groq powered AI advisor grounded in live gold layer data.</p>
         <div class="project-tags">
           <span class="tag eng">dbt</span><span class="tag eng">Airflow</span><span class="tag eng">DuckDB</span>
           <span class="tag ai">LangGraph</span><span class="tag ai">LLaMA 3.3</span>
@@ -929,7 +941,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">PR Review Bot for Automated Code Reviews</h3>
-        <p class="project-desc">GitHub App that reviews every Pull Request using 3 parallel LangGraph AI agents (code quality, security, performance). Features @mention multi-turn chat, per-repo review memory via Supabase pgvector, and zero-configuration onboarding. Running at $0/month on free tiers.</p>
+        <p class="project-desc">GitHub App that reviews every Pull Request using 3 parallel LangGraph AI agents (code quality, security, performance). Features @mention multi turn chat, per repo review memory via Supabase pgvector, and zero configuration onboarding. Running at $0/month on free tiers.</p>
         <div class="project-tags">
           <span class="tag ai">LangGraph</span><span class="tag ai">LLaMA 3.3</span><span class="tag ai">RAG</span>
           <span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag eng">pgvector</span>
@@ -947,7 +959,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">Stock Analyzer &amp; Investment Predictor</h3>
-        <p class="project-desc">Real-time stock analysis combining Random Forest ML, technical indicators (RSI, MACD, moving averages), and dual sentiment analysis into a 9-point scoring system. Produces STRONG BUY / SELL recommendations with live data from Yahoo Finance.</p>
+        <p class="project-desc">Real time stock analysis combining Random Forest ML, technical indicators (RSI, MACD, moving averages), and dual sentiment analysis into a 9 point scoring system. Produces STRONG BUY / SELL recommendations with live data from Yahoo Finance.</p>
         <div class="project-tags">
           <span class="tag ml">Random Forest</span><span class="tag ml">Sentiment NLP</span>
           <span class="tag">Streamlit</span><span class="tag">yfinance</span><span class="tag">Plotly</span>
@@ -965,7 +977,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">Customer Churn Analysis &amp; Prediction</h3>
-        <p class="project-desc">End-to-end ML pipeline comparing Logistic Regression, Random Forest, and XGBoost for predicting customer churn. Full EDA in Jupyter notebooks, interactive Streamlit dashboard with real-time prediction, and actionable business retention recommendations.</p>
+        <p class="project-desc">End to end ML pipeline comparing Logistic Regression, Random Forest, and XGBoost for predicting customer churn. Full EDA in Jupyter notebooks, interactive Streamlit dashboard with real time prediction, and actionable business retention recommendations.</p>
         <div class="project-tags">
           <span class="tag ml">XGBoost</span><span class="tag ml">Random Forest</span>
           <span class="tag ml">Logistic Regression</span>
@@ -984,7 +996,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">Supply Chain &amp; Inventory Optimization Dashboard</h3>
-        <p class="project-desc">Streamlit analytics dashboard with Prophet and ARIMA demand forecasting, service-level driven safety stock planning, interactive cost vs. service trade-off slider, multi-scenario comparison (85%–99.9%), and automated reorder alerts. Co-developed with Arvind Dharanidharan.</p>
+        <p class="project-desc">Streamlit analytics dashboard with Prophet and ARIMA demand forecasting, service level driven safety stock planning, interactive cost vs. service trade off slider, multi scenario comparison (85% to 99.9%), and automated reorder alerts. Co developed with Arvind Dharanidharan.</p>
         <div class="project-tags">
           <span class="tag ml">Prophet</span><span class="tag ml">ARIMA</span>
           <span class="tag">Streamlit</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span>
@@ -1002,7 +1014,7 @@
           <span class="project-live-dot">Live</span>
         </div>
         <h3 class="project-title">Financial Analytics Dashboard</h3>
-        <p class="project-desc">Professional-grade financial analysis platform featuring live stock data, technical indicators (RSI, MACD, Bollinger Bands), portfolio tracking, and price forecasting with Prophet and ARIMA. Clean interactive charts built on Plotly.</p>
+        <p class="project-desc">Professional grade financial analysis platform featuring live stock data, technical indicators (RSI, MACD, Bollinger Bands), portfolio tracking, and price forecasting with Prophet and ARIMA. Clean interactive charts built on Plotly.</p>
         <div class="project-tags">
           <span class="tag ml">Prophet</span><span class="tag ml">ARIMA</span>
           <span class="tag">Streamlit</span><span class="tag">yfinance</span><span class="tag">Plotly</span>
@@ -1019,8 +1031,8 @@
           <span class="project-cat">Deep Learning · Medical AI</span>
           <span class="tag research" style="font-size:10px">Research</span>
         </div>
-        <h3 class="project-title">Pneumonia Detection from Chest X-Rays</h3>
-        <p class="project-desc">CNN-based pneumonia classifier using Transfer Learning (Inception/ImageNet) on the Kaggle chest X-ray dataset. Deployed via TensorFlow Lite for edge inference. References published research in Computational Intelligence and Neuroscience, 2022.</p>
+        <h3 class="project-title">Pneumonia Detection from Chest X Rays</h3>
+        <p class="project-desc">CNN based pneumonia classifier using Transfer Learning (Inception/ImageNet) on the Kaggle chest X ray dataset. Deployed via TensorFlow Lite for edge inference. References published research in Computational Intelligence and Neuroscience, 2022.</p>
         <div class="project-tags">
           <span class="tag ml">CNN</span><span class="tag ml">Transfer Learning</span>
           <span class="tag">TF Lite</span><span class="tag">Keras</span><span class="tag">Python</span>
@@ -1036,8 +1048,8 @@
           <span class="project-cat">TinyML · Embedded AI</span>
           <span class="tag research" style="font-size:10px">Research</span>
         </div>
-        <h3 class="project-title">Magic Wand — Gesture Recognition on Arduino</h3>
-        <p class="project-desc">End-to-end TinyML pipeline on Arduino Nano 33 BLE Sense: gesture capture via WebBluetooth API, model training in Google Colab with TensorFlow, and deployment with TensorFlow Lite Micro. Recognises hand-drawn digits 0–9 from accelerometer and gyroscope data.</p>
+        <h3 class="project-title">Magic Wand · Gesture Recognition on Arduino</h3>
+        <p class="project-desc">End to end TinyML pipeline on Arduino Nano 33 BLE Sense: gesture capture via WebBluetooth API, model training in Google Colab with TensorFlow, and deployment with TensorFlow Lite Micro. Recognises hand drawn digits 0 to 9 from accelerometer and gyroscope data.</p>
         <div class="project-tags">
           <span class="tag research">TinyML</span><span class="tag research">TF Lite Micro</span>
           <span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">C++</span>
@@ -1076,7 +1088,7 @@
         <h3 class="edu-degree">B.Eng. Mechanical Engineering</h3>
         <p class="edu-school">Visvesvaraya Technological University &nbsp;·&nbsp; Belagavi, Karnataka, India</p>
         <div class="edu-details">
-          <p>Foundation in engineering mathematics, systems thinking, and technical problem-solving that underpins my approach to data infrastructure and software design.</p>
+          <p>Foundation in engineering mathematics, systems thinking, and technical problem solving that underpins my approach to data infrastructure and software design.</p>
           <p style="margin-top:10px"><strong>Certifications:</strong></p>
           <p>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate — Valid until Sep 2027</p>
         </div>
@@ -1092,7 +1104,7 @@
   <div class="container">
     <p class="section-label" style="text-align:center">Get in touch</p>
     <h2 class="section-title" style="text-align:center;margin-bottom:12px">Available immediately<br/>in Germany</h2>
-    <p class="section-subtitle" style="text-align:center;color:rgba(255,255,255,0.6);margin:0 auto 48px">Open to full-time roles in data engineering, analytics engineering, and AI engineering across Germany. Fluent in English (C1), German (A2).</p>
+    <p class="section-subtitle" style="text-align:center;color:rgba(255,255,255,0.6);margin:0 auto 48px">Open to full time roles in data engineering, analytics engineering, and AI engineering across Germany. Fluent in English (C1), German (A2).</p>
     <p class="contact-email">vikasramaswamyj@gmail.com</p>
     <p class="contact-location" style="margin-bottom:40px;display:inline-flex;align-items:center;gap:6px">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
